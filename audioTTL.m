@@ -45,8 +45,8 @@ for i=1:length(filename)
     TriggerBit = 1;
     SoundTrigger = bitget(USV, TriggerBit); 
     if ignoreShort
-        upSampleCandidates = find(diff(SoundTrigger) == +1) + 1;
-        Ups = find(SoundTrigger==1);
+        upSampleCandidates = find(diff(SoundTrigger) == -1) + 1;
+        Ups = find(SoundTrigger==0);
         TriggerSampleCount = 1;
         SampleCandDur = [];
         k=1;
